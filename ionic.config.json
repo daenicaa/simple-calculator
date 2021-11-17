@@ -1,0 +1,8 @@
+{
+  "name": "SimpleCalculator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "386719ef"
+}

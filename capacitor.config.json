@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "SimpleCalculator",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
