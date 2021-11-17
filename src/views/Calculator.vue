@@ -5,7 +5,6 @@
         name="display"
         id="display"
         :value="value"
-        color="dark"
         readonly></ion-input>
       <div class="numbers">
         <ion-button
@@ -115,6 +114,7 @@ export default {
   ion-input {
     height: 60px;
     font-size: 2.5rem;
+    color: #FFF;
     --background: #333;
   }
 
