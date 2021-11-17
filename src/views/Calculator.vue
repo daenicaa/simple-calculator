@@ -5,13 +5,13 @@
         name="display"
         id="display"
         :value="value"
+        color="dark"
         readonly></ion-input>
       <div class="numbers">
-        <button
+        <ion-button
           v-for="(n, index) in numbers"
           :key="`num-${index}`"
           @click="evaluate(n.value)"
-          class="btn btn-primary"
         >
           <template
             v-if="n.value == '*'"
@@ -21,18 +21,18 @@
           <template v-else>
             {{ n.value }}
           </template>
-        </button>
+        </ion-button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { IonInput } from '@ionic/vue';
+import { IonInput, IonButton } from '@ionic/vue';
 
 export default {
   name: 'Calculator',
-  components: { IonInput },
+  components: { IonInput, IonButton },
   data() {
     return{
       value: "",
@@ -102,7 +102,7 @@ export default {
 
   .calculator{
     font-family: sans-serif;
-    width: 250px;
+    width: 350px;
     padding: 8px;
     background-color: lightgray;
     border-radius: 4px;
@@ -112,12 +112,17 @@ export default {
     margin-top: 4px;
   }
 
-  .btn{
-    width: 50px;
-    height: 50px;
-    margin: 4px;
-  }
   ion-input {
+    height: 60px;
+    font-size: 2.5rem;
     --background: #333;
+  }
+
+  ion-button {
+    font-size: 1.5rem;
+    width: 75px;
+    height: 75px;
+    margin: 4px;
+    --box-shadow: none;
   }
 </style>
